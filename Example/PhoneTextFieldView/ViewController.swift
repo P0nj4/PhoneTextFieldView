@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import PhoneTextFieldView
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+  @IBOutlet weak var phone: PhoneTextFieldView!
+  @IBOutlet weak var phoneResult: UILabel!
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    phone.delegate = self
+  }
 
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+}
+
+extension ViewController: PhoneTextFieldViewDelegate {
+  func phoneTextFieldView(_ phoneTextFieldView: PhoneTextFieldView, phoneTextDidChange phoneText: String) {
+    phoneResult.text = phoneText
+  }
+
+  func phoneTextFieldViewWillPresentFlagsOn() -> UIViewController {
+    return self
+  }
 }
 

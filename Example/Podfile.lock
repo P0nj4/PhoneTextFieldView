@@ -1,0 +1,16 @@
+PODS:
+  - PhoneTextFieldView (0.1.0)
+
+DEPENDENCIES:
+  - PhoneTextFieldView (from `../`)
+
+EXTERNAL SOURCES:
+  PhoneTextFieldView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PhoneTextFieldView: 4e86a41ce6ef68704e371301d3089e872219e136
+
+PODFILE CHECKSUM: 08dc623d19a91476a9048afd63095b8ab9b838b3
+
+COCOAPODS: 1.4.0

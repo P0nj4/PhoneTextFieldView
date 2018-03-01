@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,35 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-GA-DCA" customClass="PhoneTextFieldView" customModule="PhoneTextFieldView">
+                                <rect key="frame" x="37" y="50" width="301" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="feA-Nz-KvJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC2-zb-8JX">
+                                <rect key="frame" x="36" y="130" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UyX-GA-DCA" secondAttribute="trailing" constant="21" id="6Zd-bW-LeE"/>
+                            <constraint firstItem="UyX-GA-DCA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="KOZ-IV-oCc"/>
+                            <constraint firstItem="UyX-GA-DCA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="21" id="mui-RH-joc"/>
+                            <constraint firstItem="zC2-zb-8JX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ovV-nA-UcI"/>
+                            <constraint firstItem="zC2-zb-8JX" firstAttribute="top" secondItem="UyX-GA-DCA" secondAttribute="bottom" constant="30" id="vhc-Gt-a95"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zC2-zb-8JX" secondAttribute="trailing" constant="20" id="wtX-IW-bfH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="phone" destination="UyX-GA-DCA" id="O9k-qF-uMx"/>
+                        <outlet property="phoneResult" destination="zC2-zb-8JX" id="kqN-Bl-qRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

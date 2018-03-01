@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneTextFieldView" customModule="PhoneTextFieldView" customModuleProvider="target">
+            <connections>
+                <outlet property="flag" destination="hMd-uf-A8T" id="8TZ-Jq-d64"/>
+                <outlet property="phoneExtension" destination="PNw-Sq-nex" id="fLb-DH-A0e"/>
+                <outlet property="phoneNumber" destination="go8-hK-PG4" id="Vgr-Jk-rvV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KOC-I4-BKm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="57"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="go8-hK-PG4">
+                    <rect key="frame" x="51" y="0.0" width="280" height="57"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration" label="Phone number"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="r5e-Jm-Qba"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSp-XW-eRM">
+                    <rect key="frame" x="0.0" y="0.0" width="51" height="57"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UY" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-uf-A8T">
+                            <rect key="frame" x="9" y="21.5" width="20" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="hnP-Ny-7vp"/>
+                                <constraint firstAttribute="width" constant="20" id="uUZ-AD-3ce"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNw-Sq-nex">
+                            <rect key="frame" x="34" y="20.5" width="9" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZ5-JS-dhA">
+                            <rect key="frame" x="0.0" y="0.0" width="51" height="57"/>
+                            <connections>
+                                <action selector="flagPressed:" destination="-1" eventType="touchUpInside" id="jGb-L4-ykv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="PNw-Sq-nex" firstAttribute="centerY" secondItem="hMd-uf-A8T" secondAttribute="centerY" id="42W-Zl-2ew"/>
+                        <constraint firstItem="vZ5-JS-dhA" firstAttribute="top" secondItem="kSp-XW-eRM" secondAttribute="top" id="Dtf-95-vfp"/>
+                        <constraint firstAttribute="bottom" secondItem="vZ5-JS-dhA" secondAttribute="bottom" id="IZW-25-6u1"/>
+                        <constraint firstItem="PNw-Sq-nex" firstAttribute="leading" secondItem="hMd-uf-A8T" secondAttribute="trailing" constant="5" id="OJ5-pI-Hkc"/>
+                        <constraint firstAttribute="trailing" secondItem="vZ5-JS-dhA" secondAttribute="trailing" id="QAd-Dg-RFx"/>
+                        <constraint firstAttribute="trailing" secondItem="PNw-Sq-nex" secondAttribute="trailing" constant="8" id="bRI-bP-FW2"/>
+                        <constraint firstItem="hMd-uf-A8T" firstAttribute="leading" secondItem="kSp-XW-eRM" secondAttribute="leading" constant="9" id="cSV-Mo-7Qf"/>
+                        <constraint firstItem="hMd-uf-A8T" firstAttribute="centerY" secondItem="kSp-XW-eRM" secondAttribute="centerY" id="lY5-jH-dCl"/>
+                        <constraint firstItem="vZ5-JS-dhA" firstAttribute="leading" secondItem="kSp-XW-eRM" secondAttribute="leading" id="pSu-Ff-1yb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kSp-XW-eRM" secondAttribute="bottom" id="6Bf-Og-pWT"/>
+                <constraint firstItem="go8-hK-PG4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R8Q-Sb-5it"/>
+                <constraint firstItem="kSp-XW-eRM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ubm-Oa-od0"/>
+                <constraint firstItem="kSp-XW-eRM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wte-Q7-8t4"/>
+                <constraint firstItem="go8-hK-PG4" firstAttribute="leading" secondItem="kSp-XW-eRM" secondAttribute="trailing" id="gv6-eR-RIC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="go8-hK-PG4" secondAttribute="bottom" id="mG4-b8-fbG"/>
+                <constraint firstItem="go8-hK-PG4" firstAttribute="leading" secondItem="kSp-XW-eRM" secondAttribute="trailing" id="pbt-zI-FEW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="go8-hK-PG4" secondAttribute="trailing" id="sXE-nb-Av8"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="11.5" y="-250.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="UY" width="16" height="16"/>
+    </resources>
+</document>
