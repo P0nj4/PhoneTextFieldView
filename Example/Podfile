@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PhoneTextFieldView_Example' do
+  pod 'PhoneTextFieldView', :path => '../'
+
+  target 'PhoneTextFieldView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
